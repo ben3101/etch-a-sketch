@@ -13,12 +13,16 @@
     <p>Select a colour and draw away</p>
     <button id="change-pixels">Change Grid Pixels</button>
     <button id="clear-pixels">Clear Grid</button>
+    <button id="change-bg">Update Background Colour</button>
     <div id="mainDiv" class="grid-container">
         <!--the grid will go in here-->
     </div>
-    <div id="colourPallete">
+    <div id="colourPallete" class="colour-div">
         <label for="colourPicker">Current colour: </label><form>
             <input type="color" id="pick-colour" name="pick-colour"></input>
+        </form>
+        <label for="backgroundPicker">Background colour: </label><form>
+            <input type="color" id="bg-colour" name="bg-colour"></input>
         </form>
     </div>
     

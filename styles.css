@@ -9,8 +9,14 @@ body{
    flex-wrap: wrap;
    max-width: 50vw;
    max-height: 50vw;
-   background-color:black
+   background-color:black;
+   border:solid black 0.5px;
 }
+
+.colour-div{
+   display:flex;
+}
+
 /*
 .grid-item{
    width: 3.125vw;
