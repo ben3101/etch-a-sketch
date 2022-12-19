@@ -9,8 +9,17 @@
     <title>Etch-A-Sketch</title>
 </head>
 <body>
+    <h1>Etch-A-Sketch App</h1>
+    <p>Select a colour and draw away</p>
+    <button id="change-pixels">Change Grid Pixels</button>
+    <button id="clear-pixels">Clear Grid</button>
     <div id="mainDiv" class="grid-container">
-        <!--the 16x16 grid will go in here-->
+        <!--the grid will go in here-->
+    </div>
+    <div id="colourPallete">
+        <label for="colourPicker">Current colour: </label><form>
+            <input type="color" id="pick-colour" name="pick-colour"></input>
+        </form>
     </div>
     
 </body>
