@@ -23,8 +23,6 @@ function changeColour(){
 createGrid(cols);
 
 function hoverFunction(){
-    event.preventDefault();
-    event.stopPropagation();
     this.style.backgroundColor=`${drawColour}`;
 }
 
@@ -37,11 +35,13 @@ function clear(){
 function gridSize(){
     //update number of divs per row/column
     //then update sqSize variable used when placing divs in each row
+    //keep record of old value
+    let prevCol = cols;
     cols = prompt(`Enter a new number of pixels per row (up to 100)
 Current size is ${cols}x${cols}`);
-    if(cols===null){
-        //if user cancels, keep it the same size as before
-        return;
+    if(cols===null || cols === '' || !cols){
+        //if user cancels or sets to null, keep it the same size as before
+        cols = prevcol;
     }//limit to 100x100 for performance reasons.
     else if(cols > 100){
         cols = 100;
