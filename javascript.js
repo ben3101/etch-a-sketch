@@ -28,6 +28,7 @@ function hoverFunction(){
 
 function clear(){
     //create a new grid with pixels set back to default colour
+    deleteGrid();
     createGrid(cols);
 }
 
@@ -39,9 +40,13 @@ function gridSize(){
     let prevCol = cols;
     cols = prompt(`Enter a new number of pixels per row (up to 100)
 Current size is ${cols}x${cols}`);
-    if(cols===null || cols === '' || !cols){
+    if(cols===null){
+        cols = prevCol;
+        return;
+    }
+    else if(cols===null || cols === '' || !cols){
         //if user cancels or sets to null, keep it the same size as before
-        cols = prevcol;
+        cols = prevCol;
     }//limit to 100x100 for performance reasons.
     else if(cols > 100){
         cols = 100;
