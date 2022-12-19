@@ -50,6 +50,8 @@ Current size is ${cols}x${cols}`);
     createGrid(cols);
 }
 
+
+
 //function to delete the previous grid
 //(used before resizing)
 function deleteGrid(){
