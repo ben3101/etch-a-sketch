@@ -23,6 +23,8 @@ function changeColour(){
 createGrid(cols);
 
 function hoverFunction(){
+    event.preventDefault();
+    event.stopPropagation();
     this.style.backgroundColor=`${drawColour}`;
 }
 
